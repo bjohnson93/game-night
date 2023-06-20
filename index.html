@@ -41,19 +41,21 @@
   <!-- <main id="router-view"> -->
   <!-- PRIMARY VIEWPORT -->
   <!-- </main> -->
-  <main class="container-fluid">
-    <section class="row">
-      <div class="col-12 col-md-6">
+  <main class="container-fluid bg-dark text-warning text-center">
+    <section class="row p-4">
+      <div class="col-12 col-md-6 ">
         <h1>GAMENIGHT</h1>
         <!-- <button onclick="app.PlayersController.test()">Touch Me</button> -->
-        <form onsubmit="app.PlayersController.addPlayer()"></form>
-        <div>
-          <label for="name">Player Name:</label>
-          <input type="text" maxlength="15" name="name" required />
-        </div>
-        <div>
-          <button type="submit">Add Player</button>
-        </div>
+        <form onsubmit="app.PlayersController.addPlayer(event)">
+          <div class="p-4">
+            <label for="playerName">Player Name:</label>
+            <input id="playerName" type="text" maxlength="15" name="name" required />
+          </div>
+          <div>
+            <button type="submit">Add Player</button>
+          </div>
+
+        </form>
       </div>
     </section>
 
