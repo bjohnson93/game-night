@@ -5,7 +5,7 @@ import { PlayersController } from "../controllers/PlayersController.js";
 
 class PlayersService {
 
-  addPlayer(formData) {
+  createPlayer(formData) {
     debugger
     const newPlayer = new Player(formData.name)
 

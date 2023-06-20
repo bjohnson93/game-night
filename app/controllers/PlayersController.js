@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 import { Player } from "../models/Player.js";
 import { router } from "../router.js";
+import { getFormData } from "../utils/FormHandler.js";
 import { setHTML } from "../utils/Writer.js";
 
 function _drawPlayers() {
@@ -43,9 +44,17 @@ export class PlayersController {
   addPlayer(event) {
     try {
       // @ts-ignore
-      window.event.preventDefault()
+      event.preventDefault()
       // @ts-ignore
-      const form = window.event.target
+      const form = event.target
+
+      const formData = getFormData(form)
+
+      console.log('here is my form data', formData);
+
+
+
+      _drawPlayers()
 
       // @ts-ignore
       form.reset()
